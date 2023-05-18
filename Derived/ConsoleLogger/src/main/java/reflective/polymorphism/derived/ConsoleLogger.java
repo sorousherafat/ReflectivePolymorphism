@@ -8,6 +8,6 @@ import java.time.format.DateTimeFormatter;
 public class ConsoleLogger implements Logger {
     @Override
     public void log(String message) {
-        System.out.printf("%s - %s", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME), message);
+        System.out.printf("%s - %s\n", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME), message);
     }
 }

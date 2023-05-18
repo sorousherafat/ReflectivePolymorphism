@@ -24,7 +24,7 @@ public class FileLogger implements Logger {
 
     @Override
     public void log(String message) {
-        message = String.format("%s - %s", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME), message);
+        message = String.format("%s - %s\n", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME), message);
         try {
             outputStream.write(message.getBytes());
         } catch (IOException exception) {
